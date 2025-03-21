@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    font-size: 50px;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    color: red;
+}
+
+#texth2{
+    font-size: 40px;
+    font-style: oblique;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(0, 255, 0);
+}
+
+.texth3{
+    font-size: 30px;
+    font-style: normal;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: blue;
+}
+
+[nome=paragrafo]{
+    color: rgb(0, 255, 255);
+}
