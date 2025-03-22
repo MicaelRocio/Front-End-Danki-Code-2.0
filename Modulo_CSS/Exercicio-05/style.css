@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2{
+    color: red;
+}
+
+/*Essas configurações abaixo tem mais importancia do que a de cima pq especificam mais*/
+
+h2.title{
+    color: green;
+}
+
+/*A ultima configuração sempre prevalece nesse caso*/
+
+.teste h2{
+    color: blue;
+}

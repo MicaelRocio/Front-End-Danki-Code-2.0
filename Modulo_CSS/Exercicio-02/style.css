@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.d1{
+    width: 33%;
+    padding: 20px;
+    height: 300px;
+    background-color: red;
+    display: inline-block;
+    overflow: scroll;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.d2{
+    width: 33%;
+    padding: 20px;
+    height: 300px;
+    background-color: green;
+    display: inline-block;
+    overflow: scroll;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.d3{
+    width: 33%;
+    padding: 20px;
+    height: 300px;
+    background-color: blue;
+    display: inline-block;
+    overflow: scroll;
+}

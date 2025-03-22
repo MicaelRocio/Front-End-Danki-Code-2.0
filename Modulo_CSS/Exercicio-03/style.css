@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg{
+    width: 100%;
+    height: 400px;
+    background-image: url(lago-1-e1565747168930-800x400.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: aqua;
+    /* background-size: cover; */
+}

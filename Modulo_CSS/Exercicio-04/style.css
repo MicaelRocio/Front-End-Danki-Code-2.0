@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.d1{
+    flex: 0.33;
+    height: 300px;
+    background-color: red;
+    overflow: scroll;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.d2{
+    flex: 0.33;
+    height: 300px;
+    background-color: green;
+    overflow: scroll;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.d3{
+    flex: 0.33;
+    height: 300px;
+    background-color: blue;
+    overflow: scroll;
+}
