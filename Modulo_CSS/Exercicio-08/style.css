@@ -1,0 +1,40 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%; 
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box {
+    width: 100%;
+    border: 1px solid black;
+    height: 500px;
+    background-color: blueviolet;
+}
+
+@media screen and (min-width: 768px) {
+    .box {
+        width: 33.3%;
+    }
+}
+
+
+/* Exemplo de media querie
+
+@media screen and (max-width: 768px) {
+    .box{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .box{
+        background-color: yellowgreen;
+    }
+}*/
