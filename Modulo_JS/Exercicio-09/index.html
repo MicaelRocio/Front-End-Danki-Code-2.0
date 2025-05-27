@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Aplicação calculadora dinamica 
+
+        var numero1 = parseFloat(prompt("Digite o primeiro número:"));
+        var operacao = prompt("Digite a operação desejada (+, -, *, /):");
+        var numero2 = parseFloat(prompt("Digite o segundo número:"));
+        while (operacao !== "+" && operacao !== "-" && operacao !== "*" && operacao !== "/"){
+            alert("Operação inválida. Por favor, digite uma operação válida (+, -, *, /).");
+            operacao = prompt("Digite a operação desejada (+, -, *, /):");
+        }
+        var resultado = 0;
+        if (operacao === "+") {
+            resultado = numero1 + numero2;
+        } else if (operacao === "-") {
+            resultado = numero1 - numero2;
+        } else if (operacao === "*") {
+            resultado = numero1 * numero2;
+        } else if (operacao === "/") {
+            if (numero2 !== 0) {
+                resultado = numero1 / numero2;
+            } else {
+                alert("Divisão por zero não é permitida.");
+                resultado = "Erro";
+            }
+        }
+
+        if (resultado !== "Erro") {
+            alert("O resultado da operação " + operacao + " entre " + numero1 + " e " + numero2 + " é: " + resultado);
+        } else {
+            alert("Não foi possível realizar a operação devido a um erro.");
+        }
+
+
+
+    </script>
+</body>
+</html>
