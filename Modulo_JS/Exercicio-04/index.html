@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function teste() {
+            console.log("Chamando a função teste");
+        }
+
+        function teste2(nome, idade) {
+            console.log("O nome passadp é: " + nome);
+            console.log("A idade passada é: " + idade);
+            console.log("---------------------");
+        }
+
+        function pegarnome(parametro) {
+            if (parametro == 1) {
+                return "João";
+            } else {
+                return "Outro nome";   
+            }
+            
+        }
+
+        var nome = pegarnome(1);
+        console.log("O nome retornado é: " + nome);
+
+        
+    </script>
+</body>
+</html>

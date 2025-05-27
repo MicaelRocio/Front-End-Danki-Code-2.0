@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var anoAtual = new Date().getFullYear();
+        var anoNascimento = prompt("Digite o ano do seu nascimento:");
+        
+        // Validação para não permitir ano maior que o atual
+        while (anoNascimento > anoAtual || anoNascimento < 1900 || isNaN(anoNascimento)) {
+            anoNascimento = prompt("Ano inválido! Digite um ano de nascimento válido (até " + anoAtual + "):");
+        }
+
+        var idade = anoAtual - anoNascimento;
+        var nome = prompt("Digite seu nome:");
+
+        alert("Olá " + nome + ", você tem " + idade + " anos.");
+    </script>
+</body>
+</html>
