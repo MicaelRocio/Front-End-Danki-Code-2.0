@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var date = new Date();
+        var dia = date.getDate();
+        var mes = date.getMonth() + 1; // Janeiro é 0
+        var ano = date.getFullYear();
+        var hora = date.getHours();
+        var minutos = date.getMinutes();
+        var segundos = date.getSeconds();
+        var dataFormatada = `${dia}/${mes}/${ano} ${hora}:${minutos}:${segundos}`;
+        alert("Data e hora atual: " + dataFormatada);
+    </script>
+</body>
+</html>
