@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .texto {
+    display: none;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    /* height: 10px;  <-- Remova esta linha */
+    }
+    .texto.mostrar {
+        display: block;
+    }
+    .conteudo span {
+        color: blue;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+    <div class="conteudo">
+        <h1>Titulo do Conteúdo</h1>
+        <span>Ver mais!</span>
+    </div>
+    <div class="texto">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, repellendus? A, sequi vel. Quia suscipit adipisci quidem nemo tempora nostrum repudiandae, eius accusamus minus assumenda tempore laboriosam, provident in dignissimos?</p>
+    </div>
+
+    <div class="conteudo">
+        <span>Ver mais!</span>
+    </div>
+    <div class="texto">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores suscipit voluptates, voluptas aut quidem velit provident cum non eveniet, quam dolorem. Neque possimus cupiditate beatae deserunt minima rerum porro sint?</p>
+    </div>
+
+    <script>
+        var spans = document.querySelectorAll('.conteudo span');
+
+        spans.forEach(function(span) {
+            span.addEventListener('click', function() {
+                var conteudo = this.parentElement.nextElementSibling;
+                
+                if (conteudo.classList.contains('mostrar')) {
+                    this.innerHTML = 'Ver mais!';
+                    conteudo.classList.remove('mostrar');
+                } else {
+                    this.innerHTML = 'Ocultar';
+                    conteudo.classList.add('mostrar');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
