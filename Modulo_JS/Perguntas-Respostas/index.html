@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Perguntas e Respostas</title>
+</head>
+<body>
+    <div class="title">
+        <h1>Perguntas e Respostas</h1>
+    </div>
+
+    <form action="" class="perguntas">
+        <div class="resposta">
+            <span>Opção 1</span>
+            <input type="radio" name="pergunta1" id="pergunta1" value="correta">
+        </div>
+        <div class="resposta">
+            <span>Opção 2</span>
+            <input type="radio" name="pergunta1" id="pergunta2" value="incorreta">
+        </div>
+        <div class="resposta">
+            <span>Opção 3</span>
+            <input type="radio" name="pergunta1" id="pergunta3" value="incorreta">
+        </div>
+    </form>
+
+    
+    <div class="title">
+        <h1>Perguntas e Respostas</h1>
+    </div>
+
+    <form action="" class="perguntas">
+        <div class="resposta">
+            <span>Opção 1</span>
+            <input type="radio" name="pergunta1" id="pergunta1" value="correta">
+        </div>
+        <div class="resposta">
+            <span>Opção 2</span>
+            <input type="radio" name="pergunta1" id="pergunta2" value="incorreta">
+        </div>
+        <div class="resposta">
+            <span>Opção 3</span>
+            <input type="radio" name="pergunta1" id="pergunta3" value="incorreta">
+        </div>
+    </form>
+
+    <script>
+        var elementos = document.querySelectorAll('[type=radio]');
+
+        for (let i = 0; i < elementos.length; i++) {
+            elementos[i].addEventListener('change', function(e){
+                let marcado = e.target.value;
+                if (marcado === 'correta') {
+                    let parentNode = e.target.parentNode;
+                    parentNode.style.backgroundColor = 'green';
+
+                    let els = parentNode.parentNode.querySelectorAll('[type=radio]');
+
+                    for (let j = 0; j < els.length; j++) {
+                        els[j].disabled = true;
+                    }
+                } else if (marcado === 'incorreta') {
+                    let parentNode = e.target.parentNode;
+                    parentNode.style.backgroundColor = 'red';
+
+                    let els = parentNode.parentNode.querySelectorAll('[type=radio]');
+
+                    for (let j = 0; j < els.length; j++) {
+                        els[j].disabled = true;
+                    }
+
+                    let correta = parentNode.parentNode.querySelector('[value=correta]');
+                    correta.parentNode.style.backgroundColor = 'green';
+                }
+            })
+
+        }
+    </script>
+</body>
+</html>
